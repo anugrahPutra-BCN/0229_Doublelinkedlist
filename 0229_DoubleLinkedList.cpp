@@ -181,3 +181,25 @@ void revtraverse()
     }
 }
 
+// prosedur untuk mencari data dan menampilkan data yang dicari jiika ada
+void searchData()
+{
+    if (listEmpty() == true)
+    {
+        cout << "\nList is empty" << endl;
+    }
+    Node *prev, *curr;
+    prev = curr = NULL;
+    cout <<  "\nEnter the roll number of the student whose record you want to search: ";
+    int num;
+    cin >> num;
+    if (search(num, &prev, &curr) == false)
+        cout << "\nRecord not found" << endl;
+    else
+    {
+        cout << "\nRecord found" << endl;
+        cout << "\nRoll number: " << curr->name << endl;
+    }
+}
+
+
