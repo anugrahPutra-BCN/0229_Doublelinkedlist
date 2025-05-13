@@ -44,4 +44,8 @@ void addNode()
         {
              START->prev = newNode; // step 4: make the first node point to the
         }
-      
+        // memberi nilai prev = null dan start = node baru
+        newNode->prev = NULL; // step 5: make tthe new node point to NULL
+        START = newNode; // step 6: make the new node the first node
+    }
+  
